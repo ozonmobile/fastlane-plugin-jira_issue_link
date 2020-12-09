@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'anovikov@ozon.ru'
 
   spec.summary       = 'Plugin to add remote link to jira issue'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-jira_issue_link"
+  spec.homepage      = "https://github.com/ozonmobile/fastlane-plugin-jira_issue_link"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
