@@ -1,3 +1,27 @@
 lane :test do
-  jira_issue_link
+  jira_issue_link(
+    ticket_id: "IOS-123", #Jira ticket key
+    global_id: "system=http://www.mycompany.com/support&id=1", #unique link identifier
+    relationship: "causes",
+    application: {
+      type: "com.acme.tracker",
+      name: "My Acme Tracker"
+    },
+    object: {
+      url: "http://www.mycompany.com/support?id=1:",
+      title: "TSTSUP-111",
+      icon: {
+        url16x16: "http://www.openwebgraphics.com/resources/data/3321/16x16_voice-support.png",
+        title: "Support Ticket"
+      },
+      status: {                                           
+        resolved: true,                                          
+        icon: {                                                       
+            url16x16: "http://www.openwebgraphics.com/resources/data/47/accept.png",
+            title: "Case Closed",                                     
+            link: "http://www.mycompany.com/support?id=1&details=closed"
+        }
+      }
+    }
+  )
 end

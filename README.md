@@ -12,15 +12,24 @@ fastlane add_plugin jira_issue_link
 
 ## About jira_issue_link
 
-Plugin to add remote link to jira issue
-
-**Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
+Plugin to add remote link to jira issue. 
+This plugin fully implement [Jira REST API for remote issue link](https://developer.atlassian.com/server/jira/platform/jira-rest-api-for-remote-issue-links/)
 
 ## Example
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
 
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
+| Key & Env Var | Description | Default |
+|-----------------|--------------------|-----------------|
+| `url` <br/> `FL_JIRA_SITE` | URL for Jira instance | |
+| `context_path` <br/> `FL_JIRA_CONTEXT_PATH` | Owner name, as found in the App's URL in App Center |''|
+| `username` <br/> `FL_JIRA_USERNAME` | Username for JIRA instance ||
+| `password` <br/> `FL_JIRA_PASSWORD` | Password for Jira ||
+| `ticket_id` <br/> `FL_JIRA_TICKET_ID` | Ticket ID for Jira, i.e. IOS-123 ||
+| `global_id` | A globally unique identifier that uniquely identifies the remote link. See https://developer.atlassian.com/server/jira/platform/using-fields-in-remote-issue-links/ ||
+| `application` <br/> `FL_JIRA_USERNAME` | Remote application instance that stores the remote object. See https://developer.atlassian.com/server/jira/platform/jira-rest-api-for-remote-issue-links/ ||
+| `relationship` <br/> `FL_JIRA_PASSWORD` | Relationship between the remote object and the Jira issue used to group together links in the UI. See https://developer.atlassian.com/server/jira/platform/jira-rest-api-for-remote-issue-links/ |links to|
+| `object` <br/> `FL_JIRA_USERNAME` | The object in the remote system. See https://developer.atlassian.com/server/jira/platform/jira-rest-api-for-remote-issue-links/ |
 
 ## Run tests for this plugin
 
